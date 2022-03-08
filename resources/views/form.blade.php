@@ -26,7 +26,7 @@
         </div>
     </nav>
 
-    <div class="container mt-5">
+    <div class="container mt-3">
         <h1 class="text-center">GERADOR DE QR-CODE PARIPASSU</h1>
 
         <form class="row g-3 needs-validation mt-5" novalidate>
@@ -62,8 +62,8 @@
         </form>
 
     </div>
-    <div class="container qrcode text-center mt-5"></div>
-    <div class="container text-center mt-5"><small>{{ date('Y') }} - OCTIO TECNOLOGIA</small></div>
+    <div class="container qrcode text-center mt-2"></div>
+    <div class="container text-center mt-5"><small>{{ date('Y') }} - OCTIO TECNOLOGIA / ALFACITRUS</small></div>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
