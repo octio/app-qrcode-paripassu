@@ -9,7 +9,7 @@ class IndexController extends Controller
 {
     //
 
-    public function readCSV($csvFile, $array)
+    private function readCSV($csvFile, $array)
     {
         $file_handle = fopen($csvFile, 'r');
         while (!feof($file_handle)) {
@@ -27,9 +27,10 @@ class IndexController extends Controller
 
         $csvFileName = "produtos.csv";
         $csvFile = storage_path('app/' . $csvFileName);
-        var_dump($csvFile);
+
         $produtos=$this->readCSV($csvFile, array('delimiter' => ','));
         
+        var_dump($produtos);
         return view('form', ['validade' => $date,'produtos'=>$produtos]);
     }
 }
