@@ -30,7 +30,6 @@ class IndexController extends Controller
 
         $produtos=$this->readCSV($csvFile, array('delimiter' => ','));
         
-        var_dump($produtos);
         return view('form', ['validade' => $date,'produtos'=>$produtos]);
     }
 }
