@@ -19,7 +19,7 @@ class IndexController extends Controller
         return $line_of_text;
     }
 
-    public function index(Type $var = null)
+    public function index()
     {
         $date = Carbon::createFromFormat('Y-m-d', date('Y-m-d'));
         $daysToAdd = 10;
@@ -27,6 +27,7 @@ class IndexController extends Controller
 
         $csvFileName = "produtos.csv";
         $csvFile = storage_path('app/' . $csvFileName);
+        var_dump($csvFile);
         $produtos=$this->readCSV($csvFile, array('delimiter' => ','));
         
         return view('form', ['validade' => $date,'produtos'=>$produtos]);
