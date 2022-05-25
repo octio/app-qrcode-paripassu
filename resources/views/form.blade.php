@@ -21,7 +21,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarID">
-                
+
             </div>
         </div>
     </nav>
@@ -34,9 +34,9 @@
             <div class="col-md-4">
                 <label for="produto" class="form-label">Produto</label>
                 <select class="form-select" id="produto" name='produto' required>
-                    
+
                     @foreach ($produtos as $produto)
-                    <option value='{{ $produto[0] }}'>{{ strtoupper($produto[1]) }}</option>  
+                        <option value='{{ $produto[0] }}'>{{ strtoupper($produto[1]) }}</option>
                     @endforeach
                 </select>
                 <div class="invalid-feedback">
@@ -79,7 +79,7 @@
             }
         });
 
-        $('input,select').on("keyup change",function() {
+        $('input,select').on("keyup change", function() {
             $.ajax({
                     method: "POST",
                     url: "/qr-code",
